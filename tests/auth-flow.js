@@ -14,6 +14,6 @@ module.exports = {
   'signup user and redirect to house': (client) => {
 
   },
-  //
-  // 'close': (client) => client.end()
+  
+  'close': (client) => client.end()
 }
