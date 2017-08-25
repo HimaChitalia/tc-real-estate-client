@@ -11,7 +11,9 @@ import { StyleSheet, css } from 'aphrodite';
 
 //custom modules imports
 import Home from '../views/Home';
-import Signup from '../views/Signup';
+import House from '../views/House';
+import ContactForm from '../views/House';
+// import Signup from '../views/Signup';
 import NotFound from '../views/NotFound';
 
 const styles = StyleSheet.create({
@@ -45,14 +47,19 @@ class App extends Component {
               >Home</NavLink>
               <NavLink 
                 className={css(styles.navlink)} 
-                to="/signup"
-              >Signup</NavLink>
-            </div>
+                to="/house"
+              >House</NavLink>
+            <NavLink 
+              className={css(styles.navlink)} 
+              to="/houses/create"
+            >Search a information of House</NavLink>
+          </div>
           </div>
           
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/houses/create" component={ContactForm} />
+            <Route exact path="/house" component={House} />
             <Route component={NotFound} />
           </Switch>
         </div>
