@@ -12,7 +12,7 @@ import { StyleSheet, css } from 'aphrodite';
 //custom modules imports
 import Home from '../views/Home';
 import House from '../views/House';
-import ContactForm from '../views/House';
+import HouseForm from '../views/House';
 // import Signup from '../views/Signup';
 import NotFound from '../views/NotFound';
 
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
   navlink: {
     textDecoration: 'none',
-    padding: '6px', 
+    padding: '6px',
     color: 'white',
     ':hover': {
       background: '#fff',
@@ -41,24 +41,24 @@ class App extends Component {
         <div className="App">
           <div className="navbar">
             <div className={css(styles.navbar)}>
-              <NavLink 
-                className={css(styles.navlink)} 
+              <NavLink
+                className={css(styles.navlink)}
                 to="/"
               >Home</NavLink>
-              <NavLink 
-                className={css(styles.navlink)} 
+              <NavLink
+                className={css(styles.navlink)}
                 to="/house"
               >House</NavLink>
-            <NavLink 
-              className={css(styles.navlink)} 
+            <NavLink
+              className={css(styles.navlink)}
               to="/houses/create"
             >Search a information of House</NavLink>
           </div>
           </div>
-          
+
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/houses/create" component={ContactForm} />
+            <Route exact path="/houses/create" component={HouseForm} />
             <Route exact path="/house" component={House} />
             <Route component={NotFound} />
           </Switch>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ContactForm from './houseForm'
+import HouseForm from './houseForm'
 
 class House extends Component {
 
   render() {
     return (
-      <ContactForm  />
+      <HouseForm  />
     )
   }
 }
