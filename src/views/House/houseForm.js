@@ -1,21 +1,18 @@
-
 import React, { Component } from 'react'
 import { Field, reduxForm, SubmissionError } from 'redux-form'
 
 async function submitToServer(data) {
-  console.log(JSON.stringify({"location": data}))
+  // console.log(JSON.stringify({"location": data}))
   try {
     let response = await fetch('http://localhost:3001/api/v1/search', {
       method:'POST',
       headers: {
-        // 'Contact-type': 'application/json',
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({"location": data})
     });
     let responseJson = await response.json();
-
     return responseJson;
   } catch(error) {
     console.error(error);
@@ -51,7 +48,7 @@ class HouseForm extends Component {
  }
 
   submit = ({ address='', city='', state=''}) => {
-    console.log(`state: ${this.state.address}`)
+    // console.log(`state: ${this.state.address}`)
     let error = {};
     let isError = false;
 
@@ -73,11 +70,15 @@ class HouseForm extends Component {
     if (isError) {
       throw new SubmissionError(error);
     } else {
-      // submit to the server
       submitToServer(this.state)
       .then(data => console.log(data))
     }
 
+    this.setState({
+      address: '',
+      city: '',
+      state: ''
+    })
   }
 
   render() {
@@ -93,7 +94,6 @@ class HouseForm extends Component {
 }
 
 HouseForm = reduxForm({
-  // a unique name for the form
   form: 'house'
 })(HouseForm)
 
