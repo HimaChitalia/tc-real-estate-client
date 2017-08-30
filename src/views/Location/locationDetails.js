@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-IMPORT { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 class LocationDetails extends Componenet {
   renderLocation() {

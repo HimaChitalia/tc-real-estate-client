@@ -1,6 +1,8 @@
 // node modules
 import React, { Component } from 'react';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // custom modules
 import { submitToServer } from '../../actions/Location'
@@ -79,4 +81,9 @@ LocationForm = reduxForm({
   form: 'location'
 })(LocationForm)
 
-export default LocationForm;
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { submitToServer }, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(LocationForm)

@@ -1,41 +1,17 @@
 //node modules imports
 
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink
-} from 'react-router-dom';
-import { StyleSheet, css } from 'aphrodite';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { StyleSheet, css } from 'aphrodite';
 
 //custom modules imports
 import Home from '../views/Home';
-// import House from '../views/House';
-// import HouseForm from '../views/House';
+import Navbar from '../views/navbar'
 import Location from '../views/Location';
 import LocationForm from '../views/Location';
 import LocationDetails from '../views/Location';
-// import Signup from '../views/Signup';
 import NotFound from '../views/NotFound';
 
-const styles = StyleSheet.create({
-  navbar: {
-    width: '100%',
-    background: '#18121e',
-    padding: '6px',
-  },
-
-  navlin000000k: {
-    textDecoration: 'none',
-    padding: '6px',
-    color: 'white',
-    ':hover': {
-      background: '#fff',
-      color: '#18121e'
-    }
-  }
-})
 
 class App extends Component {
   render() {
@@ -43,20 +19,7 @@ class App extends Component {
       <Router >
         <div className="App">
           <div className="navbar">
-            <div className={css(styles.navbar)}>
-              <NavLink
-                className={css(styles.navlink)}
-                to="/"
-              >Home</NavLink>
-              <NavLink
-                className={css(styles.navlink)}
-                to="/location"
-              > Location Information </NavLink>
-              <NavLink
-                className={css(styles.navlink)}
-                to="/locationDetails"
-              > Location Information </NavLink>
-          </div>
+            <Navbar />
           </div>
 
           <Switch>
