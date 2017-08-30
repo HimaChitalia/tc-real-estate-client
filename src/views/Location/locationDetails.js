@@ -19,9 +19,9 @@ class LocationDetails extends Component {
 
   render() {
     return (
-      // <ul className="list-group col-sm-4">
+      <ul className="list-group col-sm-4">
         {this.renderLocation}
-      // </ul>
+      </ul>
     )
   }
 }
