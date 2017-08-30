@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 
 class LocationDetails extends Component {
   renderLocation() {
+    return (
+      <div className= >
+        <h1 className="uk-heading-line uk-text-center padding-top"><span>Location info</span></h1>
+      </div>
+    )
+
     // return this.props.location.map((category) => {
     //
     //   // return category.map((item) => {
@@ -13,9 +19,9 @@ class LocationDetails extends Component {
 
   render() {
     return (
-      <ul className="list-group col-sm-4">
+      // <ul className="list-group col-sm-4">
         {this.renderLocation}
-      </ul>
+      // </ul>
     )
   }
 }
