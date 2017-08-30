@@ -7,6 +7,7 @@ import Home from './Home';
 import Navbar from './navbar'
 import LocationForm from './Location/locationForm';
 import LocationDetails from './Location/locationDetails';
+import Properties from './Properties'
 import NotFound from '../views/NotFound';
 
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/locations/create" component={LocationForm} />
             <Route exact path="/locationDetails" component={LocationDetails} />
+            <Route exact path="/properties" component={Properties} />
             <Route component={NotFound} />
           </Switch>
         </div>

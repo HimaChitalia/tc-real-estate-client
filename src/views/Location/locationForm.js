@@ -32,7 +32,7 @@ class SearchLocationInfo extends Component {
   render() {
     return (
       <div>
-        <form className="uk-form" onSubmit={this.handleOnSubmit}>
+        <form className="uk-form uk-container-center" onSubmit={this.handleOnSubmit}>
           <fieldset>
               <legend>Search Location information</legend>
               <div className="uk-form-row">
