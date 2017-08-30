@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class LocationDetails extends Componenet {
+class LocationDetails extends Component {
   renderLocation() {
     return this.props.location.map((category) => {
       return category.map((item) => {
@@ -20,10 +20,10 @@ class LocationDetails extends Componenet {
 }
 
 function mapStateToProps(state){
-  console.log(state.location)
+  console.log(state.locations)
   //whatever is returned will show up as props inside a LOcation details
   return {
-    location: state.location
+    location: state.locations
   }
 }
 

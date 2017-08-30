@@ -1,29 +1,15 @@
 // node modules
 import React, { Component } from 'react';
-import { Field, reduxForm, SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // custom modules
-import { submitToServer } from '../../actions/Location'
-// import { API_URL } from '../../global';
-// import Location from '../../redux/reducers/reducer_location';
+import { submitLocationToServer } from '../../actions/submitLocation'
 
-const renderField = ({ type, label, input, meta: { touched, error }}) => (
-    <div className="input-row">
-      <br />
-      <label>{label}</label>
-      <br />
-      <input {...input} type={ type }/>
-      { touched && error &&
-       <span className="error">{ error }</span>}
-    </div>
-  )
+class SearchLocationInfo extends Component {
 
-class LocationForm extends Component {
   constructor(props){
     super(props)
-
     this.state = {
       address: '',
       city: '',
@@ -31,59 +17,64 @@ class LocationForm extends Component {
     }
   }
 
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.submitLocationToServer('/search', this.state)
+    this.setState({address: '', city: '', state: ''})
+  }
+
   handleOnChange = event => {
-   this.setState({
-     [event.target.name]: event.target.value
-   });
- }
-
-  submit = ({ address='', city='', state=''}) => {
-    // console.log(`state: ${this.state.address}`)
-    let error = {};
-    let isError = false;
-
-    if (address.trim() === '') {
-      error.address = 'Required';
-      isError = true;
-    }
-
-    if (city.trim() === '') {
-      error.city = 'Required';
-      isError = true;
-    }
-
-    if (state.trim() === '') {
-      error.state = 'Required';
-      isError = true;
-    }
-
-    if (isError) {
-      throw new SubmissionError(error);
-    } else {
-      console.log('submitting')
-      submitToServer('/search', this.state)
-    }
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }
 
   render() {
     return (
-      <form onSubmit={ this.props.handleSubmit(this.submit) }>
-        <Field name="address" label='Address: ' component={renderField} type="text" onChange={this.handleOnChange} />
-        <Field name="city" label='City: ' component={renderField} type="text" onChange={this.handleOnChange}/>
-        <Field name="state" label='State: ' component={renderField} type="text" onChange={this.handleOnChange}/>
-        <button type="submit">Submit</button>
-      </form>
-    )
+      <div>
+        <form className="uk-form" onSubmit={this.handleOnSubmit}>
+          <fieldset>
+              <legend>Search Location information</legend>
+              <div className="uk-form-row">
+                <legend>Address</legend>
+                <input
+                type="text"
+                placeholder="Street Address"
+                name="address"
+                onChange={this.handleOnChange}
+                value={this.state.address} />
+              </div>
+              <div className="uk-form-row">
+                <legend>City</legend>
+                <input
+                type="text"
+                placeholder="city"
+                name="city"
+                onChange={this.handleOnChange}
+                value={this.state.city} />
+              </div>
+              <div className="uk-form-row">
+                <legend>State</legend>
+                <input
+                type="text"
+                placeholder="State"
+                name="state"
+                onChange={this.handleOnChange}
+                value={this.state.state} />
+              </div>
+              <input
+            type="submit"
+            value="Add Location" />
+          </fieldset>
+        </form>
+      </div>
+    );
   }
-}
-
-LocationForm = reduxForm({
-  form: 'location'
-})(LocationForm)
+};
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
-    { submitToServer }, dispatch);
+    { submitLocationToServer }, dispatch);
 };
 
-export default connect(null, mapDispatchToProps)(LocationForm)
+export default connect(null, mapDispatchToProps)(SearchLocationInfo)

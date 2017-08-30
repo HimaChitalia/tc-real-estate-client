@@ -2,12 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import {browserHistory} from 'react-router'
 import registerServiceWorker from './registerServiceWorker';
 
 //custom module imports
 import './styles/uikit.css';
 import './index.css';
-import App from './containers/App';
+import App from './views/App';
 import store from './redux/store';
 
 ReactDOM.render(
