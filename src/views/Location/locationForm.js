@@ -1,23 +1,11 @@
-import React, { Component } from 'react'
-import { Field, reduxForm, SubmissionError } from 'redux-form'
+// node modules
+import React, { Component } from 'react';
+import { Field, reduxForm, SubmissionError } from 'redux-form';
 
-async function submitToServer(data) {
-  // console.log(JSON.stringify({"location": data}))
-  try {
-    let response = await fetch('http://localhost:3001/api/v1/search', {
-      method:'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({"location": data})
-    });
-    let responseJson = await response.json();
-    return responseJson;
-  } catch(error) {
-    console.error(error);
-  }
-}
+// custom modules
+import { submitToServer } from '../../actions/Location'
+// import { API_URL } from '../../global';
+// import Location from '../../redux/reducers/reducer_location';
 
 const renderField = ({ type, label, input, meta: { touched, error }}) => (
     <div className="input-row">
@@ -30,7 +18,7 @@ const renderField = ({ type, label, input, meta: { touched, error }}) => (
     </div>
   )
 
-class HouseForm extends Component {
+class LocationForm extends Component {
   constructor(props){
     super(props)
 
@@ -70,15 +58,9 @@ class HouseForm extends Component {
     if (isError) {
       throw new SubmissionError(error);
     } else {
-      submitToServer(this.state)
-      .then(data => console.log(data))
+      console.log('submitting')
+      submitToServer('/search', this.state)
     }
-
-    this.setState({
-      address: '',
-      city: '',
-      state: ''
-    })
   }
 
   render() {
@@ -93,8 +75,8 @@ class HouseForm extends Component {
   }
 }
 
-HouseForm = reduxForm({
-  form: 'house'
-})(HouseForm)
+LocationForm = reduxForm({
+  form: 'location'
+})(LocationForm)
 
-export default HouseForm;
+export default LocationForm;

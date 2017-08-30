@@ -11,8 +11,11 @@ import { StyleSheet, css } from 'aphrodite';
 
 //custom modules imports
 import Home from '../views/Home';
-import House from '../views/House';
-import HouseForm from '../views/House';
+// import House from '../views/House';
+// import HouseForm from '../views/House';
+import Location from '../views/Location';
+import LocationForm from '../views/Location';
+import LocationDetails from '../views/Location';
 // import Signup from '../views/Signup';
 import NotFound from '../views/NotFound';
 
@@ -23,7 +26,7 @@ const styles = StyleSheet.create({
     padding: '6px',
   },
 
-  navlink: {
+  navlin000000k: {
     textDecoration: 'none',
     padding: '6px',
     color: 'white',
@@ -47,19 +50,20 @@ class App extends Component {
               >Home</NavLink>
               <NavLink
                 className={css(styles.navlink)}
-                to="/house"
-              >House</NavLink>
-            <NavLink
-              className={css(styles.navlink)}
-              to="/houses/create"
-            >Search a information of House</NavLink>
+                to="/location"
+              > Location Information </NavLink>
+              <NavLink
+                className={css(styles.navlink)}
+                to="/locationDetails"
+              > Location Information </NavLink>
           </div>
           </div>
 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/houses/create" component={HouseForm} />
-            <Route exact path="/house" component={House} />
+            <Route exact path="/locations/create" component={LocationForm} />
+            <Route exact path="/locationDetails" component={LocationDetails} />
+            <Route exact path="/location" component={Location} />
             <Route component={NotFound} />
           </Switch>
         </div>
