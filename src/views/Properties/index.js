@@ -3,7 +3,7 @@ import Iframe from 'react-iframe'
 
 const Properties = () => {
   return (
-    <div className="uk-cover">
+    <div>
       <Iframe url="http://msx.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ea95f8"
               position="absolute"
               width="100%"
