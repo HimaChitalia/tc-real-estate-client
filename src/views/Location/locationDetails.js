@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class LocationDetails extends Component {
   renderLocation() {
     return (
-      <div className= >
+      <div >
         <h1 className="uk-heading-line uk-text-center padding-top"><span>Location info</span></h1>
       </div>
     )
