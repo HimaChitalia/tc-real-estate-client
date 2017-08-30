@@ -1,7 +1,6 @@
 import { API_URL } from '../global';
 import { makingAPIRequest, successfulAPIRequest, unsuccessfulAPIRequest } from './apiRequest';
 
-
 export const getLocationDetails = locationInfo => {
     return {
         type: 'GET_LOCATION_DETAILS',
@@ -25,7 +24,6 @@ export function submitLocationToServer(url, data) {
       .then(locationInfo => {
           dispatch(successfulAPIRequest());
           dispatch(getLocationDetails(locationInfo));
-          // routerHistory.replace('/');
       })
       .catch(err => dispatch(unsuccessfulAPIRequest()));
   }

@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 
 class LocationDetails extends Component {
   renderLocation() {
-    return this.props.location.map((category) => {
-      return category.map((item) => {
-        <li key={item.name} className="list-group-itm"> { item.name } </li>
-      })
-    })
+    // return this.props.location.map((category) => {
+    //
+    //   // return category.map((item) => {
+    //   //   <li key={item.name} className="list-group-itm"> { item.name } </li>
+    //   // })
+    // })
    }
 
   render() {
