@@ -4,13 +4,19 @@
   "private": true,
   "dependencies": {
     "aphrodite": "^1.2.3",
+    "axios": "^0.16.2",
+    "es6-promise": "^4.1.1",
     "react": "^15.6.1",
-    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "4.0.0",
     "react-scripts": "1.0.11",
     "react-uikit-base": "^2.0.2",
-    "redux-form": "^7.0.3"
+    "redux": "^3.7.2",
+    "redux-form": "^7.0.3",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0",
+    "uikit-react": "^2.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
