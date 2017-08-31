@@ -1,42 +1,57 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Location from './location'
+import '../../styles/custom.css'
 
 class LocationDetails extends Component {
+  
+  cap = (str) => {
+      return str.split(' ').map(function (e) {
+          return e.replace(/([a-z])/, function (match, value) {
+              return value.toUpperCase();
+          })
+      }).join(' ');
+  }
+
   showLocationInfo = () => {
-    const { visiable, hospitalsArray, restaurantsArray, pharmaciesArray, schoolsArray, trainsArray } = this.props
-      console.log( hospitalsArray )
+    const { visiable, loadingData, location, hospitalsArray, restaurantsArray, pharmaciesArray, schoolsArray, trainsArray } = this.props
+
       return visiable === true ?
+
       <div>
-        <h1> Hospitals </h1>
-        <ul>
-          { hospitalsArray.map(hospital => <li key={hospital.key}>{ hospital.name }</li>) }
-        </ul>
-        <h1> Train Station </h1>
-        <ul>
-          { trainsArray.map(train => <li key={train.key}>{ train.name }</li>) }
-        </ul><h1> Pharmacies </h1>
-        <ul>
-          { pharmaciesArray.map(pharmacy => <li key={pharmacy.key}>{ pharmacy.name }</li>) }
-        </ul><h1> Schools </h1>
-        <ul>
-          { schoolsArray.map(school => <li key={school.key}>{ school.name }</li>) }
-        </ul><h1> Restaurants </h1>
-        <ul>
-          { restaurantsArray.map(restaurant => <li key={restaurant.key}>{ restaurant.name }</li>) }
-        </ul>
-      </div> :
-      <div >
-        <h1 > NO info </h1>
-      </div>
+        <h2 className="uk-text-truncate">Location Address: { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}</h2>
+        <h4> Hospitals </h4>
+          { this.showInfo(hospitalsArray) }
+        <h4> Train Station </h4>
+          { this.showInfo(trainsArray) }
+        <h4> Pharmacies </h4>
+          { this.showInfo(pharmaciesArray) }
+        <h4> Schools </h4>
+          { this.showInfo(schoolsArray) }
+        <h4> Restaurants </h4>
+          { this.showInfo(restaurantsArray) }
+      </div> : loadingData === true ?
+        <div> <h2 > Loading Location Information.. </h2> </div> :
+        <div> </div>
+   }
+
+   showInfo = (array) => {
+     return <table className="uk-table uk-table-middle uk-table-divider uk-table-striped uk-table-responsive">
+              <thead>
+                <tr>
+                  <th className="uk-table-expand">Name</th>
+                  <th className="uk-table-expand">Address</th>
+                  <th >Distance (from location)</th>
+                  <th >Travel Time (driving)</th>
+                </tr>
+              </thead>
+            <tbody>
+                {array.map(element => <Location key={element.key} location={element} />)}
+            </tbody>
+          </table>
    }
 
    render() {
-    //  console.log(this.props)
-     // hospitalsArray: state.locations.hosp,
-     // trainsArray: state.locations.trains,
-     // schoolsArray: state.locations.schools,
-     // pharmaciesArray: state.locations.pharmacies,
-     // restaurantsArray: state.locations.restaurants
      return (
        <div>
         {this.showLocationInfo()}
@@ -46,10 +61,12 @@ class LocationDetails extends Component {
  }
 
 function mapStateToProps(state){
-  // console.log(state)
+  console.log(state)
   //whatever is returned will show up as props inside a LOcation details
   return {
-    visiable :state.locations.infoVisible,
+    loadingData: state.fetchingData.loadingData,
+    location: state.locations.location,
+    visiable: state.locations.infoVisible,
     locationArray: state.locations,
     hospitalsArray: state.locations.hospitals,
     trainsArray: state.locations.trains,

@@ -1,6 +1,12 @@
 import { API_URL } from '../global';
 import { makingAPIRequest, successfulAPIRequest, unsuccessfulAPIRequest } from './apiRequest';
 
+export const clearLocationDetails = () => {
+    return {
+        type: 'CLEAR_LOCATION_DETAILS',
+    };
+};
+
 export const getLocationDetails = locationInfo => {
     return {
         type: 'GET_LOCATION_DETAILS',
@@ -12,6 +18,7 @@ export function submitLocationToServer(url, data) {
 
   return dispatch => {
     dispatch(makingAPIRequest());
+    dispatch(clearLocationDetails());
     return fetch(API_URL + url, {
       method: 'POST',
       headers: {
