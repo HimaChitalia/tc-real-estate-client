@@ -4,7 +4,7 @@ import Location from './location'
 import '../../styles/custom.css'
 
 class LocationDetails extends Component {
-  
+
   cap = (str) => {
       return str.split(' ').map(function (e) {
           return e.replace(/([a-z])/, function (match, value) {
@@ -61,8 +61,7 @@ class LocationDetails extends Component {
  }
 
 function mapStateToProps(state){
-  console.log(state)
-  //whatever is returned will show up as props inside a LOcation details
+  console.log(state.locations.hospitals)
   return {
     loadingData: state.fetchingData.loadingData,
     location: state.locations.location,

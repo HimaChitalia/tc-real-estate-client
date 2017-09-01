@@ -4,11 +4,13 @@ import promise from 'redux-promise';
 
 import fetchingData from '../reducers/fetchingData';
 import locations from '../reducers/locationReducer';
+import contacts from '../reducers/contactReducer';
 import route from '../reducers/routeReducer'
 
 const reducers = combineReducers({
   fetchingData,
   locations,
+  contacts,
   route
 })
 

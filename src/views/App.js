@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Navbar from './navbar'
 import LocationForm from './Location/locationForm';
+import SendContactInfo from './Contact/contactForm';
 import LocationDetails from './Location/locationDetails';
 import Properties from './Properties'
 import NotFound from '../views/NotFound';
@@ -23,6 +24,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/locations/create" component={LocationForm} />
+            <Route exact path="/contact" component={SendContactInfo} />
             <Route exact path="/locationDetails" component={LocationDetails} />
             <Route exact path="/properties" component={Properties} />
             <Route component={NotFound} />
