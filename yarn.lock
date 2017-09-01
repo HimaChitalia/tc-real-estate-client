@@ -5180,7 +5180,7 @@ react-dev-utils@^3.1.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^15.6.1:
+react-dom@^15.0.1, react-dom@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
   dependencies:
@@ -5214,11 +5214,20 @@ react-iframe@^1.0.7:
   dependencies:
     prop-types "^15.5.x"
 
+react-image-slideshow@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/react-image-slideshow/-/react-image-slideshow-1.5.2.tgz#456928d2f9c0c975c67d33278dab7dba1b18ebb6"
+  dependencies:
+    react "^15.0.1"
+    react-dom "^15.0.1"
+    react-portal "^3.0.0"
+    tween.js "^16.3.5"
+
 react-input-autosize@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.3.tgz#ced3acd0f237cc04a1475c9207d4da1b7c0a0c86"
 
-react-portal@3.1.0:
+react-portal@3.1.0, react-portal@^3.0.0, react-portal@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.1.0.tgz#865c44fb72a1da106c649206936559ce891ee899"
   dependencies:
@@ -5234,6 +5243,10 @@ react-redux@^5.0.6:
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
+
+react-reveal-text@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-reveal-text/-/react-reveal-text-0.0.3.tgz#fc24b550d8b210b6d4323ce0078f7d0d3a54768e"
 
 react-router-dom@4.0.0:
   version "4.0.0"
@@ -5306,7 +5319,7 @@ react-uikit-base@^2.0.2:
     react-dom "~15.3.2"
     ufunc "~2.0.1"
 
-react@^15.6.1:
+react@^15.0.1, react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
   dependencies:
@@ -6248,6 +6261,10 @@ tunnel-agent@^0.6.0:
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
   dependencies:
     safe-buffer "^5.0.1"
+
+tween.js@^16.3.5, tween.js@^16.6.0:
+  version "16.6.0"
+  resolved "https://registry.yarnpkg.com/tween.js/-/tween.js-16.6.0.tgz#739104c9336cc4f11ee53f9ce7cede51e6723624"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"

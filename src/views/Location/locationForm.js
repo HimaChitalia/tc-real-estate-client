@@ -34,6 +34,8 @@ class SearchLocationInfo extends Component {
     return (
       <div>
         <div>
+        <h3 className='uk-text-center'>Search here for any location to know nearby amenities!</h3>
+
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset>
               <legend>Search Location information</legend>

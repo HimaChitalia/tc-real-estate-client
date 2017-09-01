@@ -10,7 +10,10 @@
     "react-dom": "^15.6.1",
     "react-frame-component": "^1.1.1",
     "react-iframe": "^1.0.7",
+    "react-image-slideshow": "^1.5.2",
+    "react-portal": "^3.1.0",
     "react-redux": "^5.0.6",
+    "react-reveal-text": "^0.0.3",
     "react-router-dom": "4.0.0",
     "react-scripts": "1.0.11",
     "react-uikit-base": "^2.0.2",
@@ -18,6 +21,7 @@
     "redux-form": "^7.0.3",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "tween.js": "^16.6.0",
     "uikit-react": "^2.3.2"
   },
   "scripts": {
