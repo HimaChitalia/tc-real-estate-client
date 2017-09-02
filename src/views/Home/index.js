@@ -5,6 +5,11 @@ import Background from '../../images/house_4.png';
 import '../../styles/custom.css';
 import { SocialIcon } from 'react-social-icons';
 
+
+import mailImg from '../../images/Message-Mail-48 (1).png';
+import linkedInImg from '../../images/LinkedIn-48 (2).png';
+import facebookImg from '../../images/Facebook-48 (1).png';
+
 var sectionStyle = {
   width: "100%",
   height: "900px",
@@ -28,9 +33,13 @@ class Home extends Component {
             <div className='bgColor' > <br/>
               <h5 className='marginRemove uk-text-center textColor'> Trushal Chitalia </h5>
               <h5 className='marginRemove uk-text-center textColor'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/">DDS REAL ESTATE</a> </h5>
-              <h5 className='marginRemove textColor'> <a href="tel:+1-732-429-6129">  732-429-6129</a> / <a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com  </a> </h5>
-              <SocialIcon className='marginRight marginBottom marginLeft' url="https://www.linkedin.com/in/trushal-chitalia-35988638/" color="#2D2F63"  />
-              <SocialIcon className='marginRight marginBottom' url="https://www.facebook.com/ChitaliaTrushal/" color="#2D2F63"  />
+              <h5 className='marginRemove textColor uk-text-center'>  732-429-6129 </h5>
+
+              <ul className='connect'>
+                <li className='marginRemove marginRight'> <a  href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
+                <li className='marginRemove marginRight'> <a  href="https://www.linkedin.com/in/trushal-chitalia-35988638/"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
+                <li className='marginRemove marginRight'> <a  href="https://www.facebook.com/ChitaliaTrushal/"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
+              </ul>
             </div>
           </div>
         </div>
