@@ -34,12 +34,10 @@ class SendContactInfo extends Component {
   render() {
     return (
       <div>
-        <div className="uk-position-center">
-        <h3 className='uk-text-center'>Thank you for visiting my website.</h3>
-        <h3 className='uk-text-center'>You can always contact me on 732-429-6129 or just fill up the below form and I will get back to you sooner!</h3>
-
+        <div className="uk-position-center formMargin">
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset className="bgColor">
+              <h2 className='uk-text-center'>Send Your Inquiries!</h2>
               <div className="uk-form-row">
                 <legend>Name</legend>
                 <input className="uk-form-large" type="text" placeholder="Your Name" name="name" onChange={this.handleOnChange} value={this.state.name} />

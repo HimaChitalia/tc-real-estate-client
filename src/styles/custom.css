@@ -3,11 +3,20 @@ h2 {
 }
 
 .bgColor {
-  background-color: #FFFEDF;
+  background-color: #FFE1AC;
 }
 
 a{
-  color: #2E3548;
+  color: #2D2F63;
+}
+
+.textColor {
+  color: #2D2F63;
+}
+
+.divMargin {
+  margin-left: 80px;
+  margin-top: 80px;
 }
 
 .marginRemove {
@@ -23,6 +32,36 @@ a{
   margin-left: 60px;
 }
 
+.margin {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
 .marginBottom {
   margin-bottom: 7px;
+}
+
+.uk-fixed-navigation {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+}
+
+.footerCol {
+  background: #2E3548;
+  text-align:center;
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  margin-bottom:-205px
+}
+
+.connect li {
+    display:inline-block;
+}
+
+.formMargin {
+  margin-bottom: 50px;
 }

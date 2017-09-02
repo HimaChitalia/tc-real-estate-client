@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apeman-react-footer": "^3.0.1",
     "aphrodite": "^1.2.3",
     "axios": "^0.16.2",
     "es6-promise": "^4.1.1",
