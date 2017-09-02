@@ -31,12 +31,16 @@ class SearchLocationInfo extends Component {
   }
 
   render() {
+
+    console.log(this.props)
+    const { visiable } = this.props
+
     return (
       <div>
-        <div className='uk-position-center locationFormMargin'>    
+        <div className='uk-position-center locationFormMargin'>
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset className="bgColor">
-              <h2 className='uk-text-center'>Search here for any location to know nearby amenities!</h2>
+              <h2 className='uk-text-center'>Search Here For Any Location To Know Nearby Amenities!</h2>
               <div className="uk-form-row">
                 <legend>Address</legend>
                 <input type="text" placeholder="Street Address" name="address" onChange={this.handleOnChange} value={this.state.address} />
@@ -55,7 +59,11 @@ class SearchLocationInfo extends Component {
         </div>
         <div>
           { < LocationDetails /> }
-        </div>
+        </div> { visiable === false ?
+        <div className='sideText navbar-color uk-text-center uk-position-bottom'>
+          <h5 className='fontSize' > When It Comes To Real Estate, Think Of Me - Trushal Chitalia </h5>
+        </div> :
+        <div></div> }
       </div>
     );
   }
@@ -66,4 +74,11 @@ const mapDispatchToProps = dispatch => {
     { submitLocationToServer }, dispatch);
 };
 
-export default connect(null, mapDispatchToProps)(SearchLocationInfo)
+function mapStateToProps(state){
+  console.log(state.locations.infoVisible)
+  return {
+    visiable: state.locations.infoVisible
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchLocationInfo)

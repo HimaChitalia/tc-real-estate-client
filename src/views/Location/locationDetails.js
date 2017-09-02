@@ -30,9 +30,13 @@ class LocationDetails extends Component {
           { this.showInfo(schoolsArray) }
         <h4> Restaurants </h4>
           { this.showInfo(restaurantsArray) }
+        <div className='sideTextLocation navbar-color uk-text-center'>
+          <br/>
+          <h5 className='fontSize' > When It Comes To Real Estate, Think Of Me - Trushal Chitalia </h5>
+        </div>
       </div> : loadingData === true ?
-        <div className='uk-position-bottom-center'> <h2 > Loading Location Information.. </h2> </div> :
-        <div className='uk-position-bottom-center'> </div>
+        <div className='locationDetailsMargin uk-text-center'> <h2 > Loading Location Information.. </h2> </div> :
+        <div className='locationDetailsMargin'> </div>
    }
 
    showInfo = (array) => {
