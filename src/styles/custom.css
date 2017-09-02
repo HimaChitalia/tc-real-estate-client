@@ -58,8 +58,7 @@ a{
   text-align:center;
   position:absolute;
   bottom:0;
-  width: 100%;+
-
+  width: 100%;
   margin-bottom:-205px
 }
 
@@ -73,11 +72,15 @@ a{
 
 .locationFormMargin {
   margin-top: -70px;
-  margin-bottom: 20px;
+  margin-bottom: -20px;
 }
 
 .sideText {
   margin-right: 20px;
   margin-top: 150px;
   font-family: Times New Roman;
+}
+
+.locationDetailsMargin {
+  margin-top:550px;
 }

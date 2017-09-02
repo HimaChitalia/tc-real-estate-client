@@ -18,8 +18,8 @@ class LocationDetails extends Component {
 
       return visiable === true ?
 
-      <div className='uk-text-center uk-position-bottom-center'>
-        <h2 className="uk-text-truncate">Location Address: { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}</h2>
+      <div className='locationDetailsMargin'>
+        <h2 >Location Address: { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}</h2>
         <h4> Hospitals </h4>
           { this.showInfo(hospitalsArray) }
         <h4> Train Station </h4>
