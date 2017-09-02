@@ -18,7 +18,7 @@ class LocationDetails extends Component {
 
       return visiable === true ?
 
-      <div>
+      <div className='uk-text-center uk-position-bottom-center'>
         <h2 className="uk-text-truncate">Location Address: { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}</h2>
         <h4> Hospitals </h4>
           { this.showInfo(hospitalsArray) }
@@ -31,8 +31,8 @@ class LocationDetails extends Component {
         <h4> Restaurants </h4>
           { this.showInfo(restaurantsArray) }
       </div> : loadingData === true ?
-        <div> <h2 > Loading Location Information.. </h2> </div> :
-        <div> </div>
+        <div className='uk-position-bottom-center'> <h2 > Loading Location Information.. </h2> </div> :
+        <div className='uk-position-bottom-center'> </div>
    }
 
    showInfo = (array) => {

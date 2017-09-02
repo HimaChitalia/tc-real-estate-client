@@ -33,12 +33,10 @@ class SearchLocationInfo extends Component {
   render() {
     return (
       <div>
-        <div>
-        <h3 className='uk-text-center'>Search here for any location to know nearby amenities!</h3>
-
+        <div className='uk-position-center locationFormMargin'>    
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
-            <fieldset>
-              <legend>Search Location information</legend>
+            <fieldset className="bgColor">
+              <h2 className='uk-text-center'>Search here for any location to know nearby amenities!</h2>
               <div className="uk-form-row">
                 <legend>Address</legend>
                 <input type="text" placeholder="Street Address" name="address" onChange={this.handleOnChange} value={this.state.address} />

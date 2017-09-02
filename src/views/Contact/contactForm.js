@@ -34,7 +34,7 @@ class SendContactInfo extends Component {
   render() {
     return (
       <div>
-        <div className="uk-position-center formMargin wrapper">
+        <div className="uk-position-center formMargin">
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset className="bgColor">
               <h2 className='uk-text-center'>Get In Touch!</h2>
@@ -55,7 +55,7 @@ class SendContactInfo extends Component {
           </form>
         </div>
         <div>
-          { < EmailMsg className='bottom'/> }
+          { < EmailMsg /> }
         </div>
       </div>
     );
