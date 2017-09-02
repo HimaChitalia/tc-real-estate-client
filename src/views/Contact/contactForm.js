@@ -34,10 +34,10 @@ class SendContactInfo extends Component {
   render() {
     return (
       <div>
-        <div className="uk-position-center formMargin">
+        <div className="uk-position-center formMargin wrapper">
           <form className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset className="bgColor">
-              <h2 className='uk-text-center'>Send Your Inquiries!</h2>
+              <h2 className='uk-text-center'>Get In Touch!</h2>
               <div className="uk-form-row">
                 <legend>Name</legend>
                 <input className="uk-form-large" type="text" placeholder="Your Name" name="name" onChange={this.handleOnChange} value={this.state.name} />
@@ -55,7 +55,7 @@ class SendContactInfo extends Component {
           </form>
         </div>
         <div>
-          { < EmailMsg /> }
+          { < EmailMsg className='bottom'/> }
         </div>
       </div>
     );

@@ -3,8 +3,12 @@ h2 {
 }
 
 .bgColor {
-  background-color: #FFE1AC;
+  background-color: #D8E0E2;
 }
+
+/*.bgColor {
+  background-color: #FFE1AC;
+}*/
 
 a{
   color: #2D2F63;
@@ -71,3 +75,14 @@ a{
   margin-top: 150px;
   font-family: Times New Roman;
 }
+
+
+/* FOR THE EMAIL RESPONSE TO STICK TO BOTTOM */
+/*.wrapper {
+  position:relative;
+}
+
+.bottom {
+  position:absolute;
+  bottom:0;
+}*/

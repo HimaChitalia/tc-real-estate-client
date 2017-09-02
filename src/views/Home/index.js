@@ -28,7 +28,7 @@ class Home extends Component {
             <div className='bgColor' > <br/>
               <h5 className='marginRemove uk-text-center textColor'> Trushal Chitalia </h5>
               <h5 className='marginRemove uk-text-center textColor'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/">DDS REAL ESTATE</a> </h5>
-              <h5 className='marginRemove textColor'> <a href="tel:+1-732-429-6129">732-429-6129</a> / <a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a> </h5>
+              <h5 className='marginRemove textColor'> <a href="tel:+1-732-429-6129">  732-429-6129</a> / <a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com  </a> </h5>
               <SocialIcon className='marginRight marginBottom marginLeft' url="https://www.linkedin.com/in/trushal-chitalia-35988638/" color="#2D2F63"  />
               <SocialIcon className='marginRight marginBottom' url="https://www.facebook.com/ChitaliaTrushal/" color="#2D2F63"  />
             </div>
