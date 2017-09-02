@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //custom modules imports
 import Home from './Home';
 import Navbar from './navbar'
-// import Footer from './footer'
+import Footer from './footer';
+import Sidebar from './sidebar';
 import LocationForm from './Location/locationForm';
 import SendContactInfo from './Contact/contactForm';
 import LocationDetails from './Location/locationDetails';
@@ -31,7 +32,12 @@ class App extends Component {
             <Route component={NotFound} />
           </Switch>
 
+          <div className='sidebar'>
+            <Sidebar />
+          </div>
+
           <div className='footer'>
+            <Footer />
           </div>
         </div>
       </Router >

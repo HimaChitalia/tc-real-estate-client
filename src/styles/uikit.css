@@ -3859,7 +3859,8 @@ ul.uk-nav-sub {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  background: #2E3548;
+  background: rgba(46, 53, 72, .6);
+  /*background: #2E3548;*/
   /* 1 */
   position: relative;
 }
