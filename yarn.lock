@@ -972,7 +972,7 @@ babel-runtime@6.23.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1367,7 +1367,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@2.2.5:
+classnames@2.2.5, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -5223,6 +5223,12 @@ react-image-slideshow@^1.5.2:
     react-portal "^3.0.0"
     tween.js "^16.3.5"
 
+react-image@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-1.0.1.tgz#eb3178a7b2a09945310a4bea6f89317d8b6f8c40"
+  dependencies:
+    prop-types "^15.5.8"
+
 react-input-autosize@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.3.tgz#ced3acd0f237cc04a1475c9207d4da1b7c0a0c86"
@@ -5309,6 +5315,13 @@ react-scripts@1.0.11:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "1.1.2"
+
+react-social-icons@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-2.7.0.tgz#768db0a3e5d417146aaf6a83c566f743d9b4a269"
+  dependencies:
+    babel-runtime "^6.11.6"
+    classnames "^2.2.5"
 
 react-uikit-base@^2.0.2:
   version "2.0.2"

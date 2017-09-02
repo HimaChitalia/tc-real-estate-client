@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () =>  {
   return (
     <div className="App">
-      <nav className="uk-navbar fixed">
+      <nav className="uk-navbar fixed data-uk-sticky">
         <ul className="uk-navbar-nav">
           <li className="navlink-style"><NavLink to="/">Home</NavLink></li>
           <li className="navlink-style"><NavLink to="/properties">Properties</NavLink></li>

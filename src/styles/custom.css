@@ -1,9 +1,28 @@
-
-
 h2 {
-  color: #tomato;
+  color: tomato;
 }
 
 .bgColor {
-  background-color: tomato;
+  background-color: #FFFEDF;
+}
+
+a{
+  color: #2E3548;
+}
+
+.marginRemove {
+  margin-top: -14px;
+  margin-bottom: -70;
+}
+
+.marginRight {
+  margin-right: 50px;
+}
+
+.marginLeft {
+  margin-left: 60px;
+}
+
+.marginBottom {
+  margin-bottom: 7px;
 }

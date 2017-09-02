@@ -1,8 +1,9 @@
 // import Background from '../../images/pexels-photo-277559.jpeg';
 import React, { Component } from 'react';
-import ReactRevealText from 'react-reveal-text';
-import Background from '../../images/kitchen-2486092_1920.jpg';
-
+import trushalImag from '../../images/trush_1.jpg';
+import Background from '../../images/house_5.png';
+import '../../styles/custom.css';
+import { SocialIcon } from 'react-social-icons';
 
 var sectionStyle = {
   width: "100%",
@@ -10,20 +11,30 @@ var sectionStyle = {
   backgroundImage: `url(${Background})`
 };
 
+var divStyle = {
+  width: "100%",
+  height: "80%",
+  backgroundImage: `url(${trushalImag})`
+};
+
 class Home extends Component {
   render() {
     return (
-      <div className="uk-height-viewport" >
+      <div  >
         <section style={ sectionStyle }>
-        <div className='uk-position-medium uk-position-center uk-text-center'>
-          <ReactRevealText
-            text="AMAZING TEXT"
-            show
-            className="my-class-name"
-            style={{ color: "tomato", fontSize: "24px", lineHeight: "36px", textAlign: "center", fontFamily: "sans-serif", letterSpacing: "1.2em", paddingLeft: "1.2em"}}
-          />
+        <div className="uk-position-center-left uk-position-medium uk-position-center uk-padding-large">
+          <div style={divStyle}>
+          <br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+            <div className='bgColor' > <br/>
+              <h5 className='marginRemove uk-text-center textColor'> Trushal Chitalia </h5>
+              <h5 className='marginRemove uk-text-center textColor'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/">DDS REAL ESTATE</a> </h5>
+              <h5 className='marginRemove textColor'> <a href="tel:+1-732-429-6129">732-429-6129</a> / <a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a> </h5>
+              <SocialIcon className='marginRight marginBottom marginLeft' url="https://www.linkedin.com/in/trushal-chitalia-35988638/" color="#2E3548"  />
+              <SocialIcon className='marginRight marginBottom' url="https://www.facebook.com/ChitaliaTrushal/" color="#2E3548"  />
+            </div>
+          </div>
         </div>
-        </section>
+       </section>
       </div>
     );
   }
