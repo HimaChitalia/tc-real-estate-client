@@ -57,6 +57,9 @@ class SendContactInfo extends Component {
         <div>
           { < EmailMsg /> }
         </div>
+        <div className='sideText navbar-color uk-text-center uk-position-bottom'>
+          <h5 className='fontSize' > When It Comes To Real Estate, Think Of Me - Trushal Chitalia </h5>
+        </div>
       </div>
     );
   }

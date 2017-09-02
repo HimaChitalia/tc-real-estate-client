@@ -4001,6 +4001,7 @@ ul.uk-nav-sub {
  * Nav items
  */
 .uk-navbar-nav > li > a {
+  /* navlink active light grey / gray color */
   color: #D3D5D4;
   text-transform: uppercase;
   -webkit-transition: 0.1s ease-in-out;
@@ -4013,6 +4014,7 @@ ul.uk-nav-sub {
  * Apply hover style also to focus state and if dropdown is opened
  */
 .uk-navbar-nav > li:hover > a {
+  /* red color on hover to navlink  */
   color: #C72230;
   outline: none;
 }

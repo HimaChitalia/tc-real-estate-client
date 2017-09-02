@@ -8,7 +8,7 @@ h2 {
 }
 
 .bgColor {
-  background-color: rgba(216, 224, 226, .7);
+  background-color: rgba(216, 224, 226, .8);
   /*background-color: rgba(216, 224, 226, .7);*/
 }
 
@@ -26,7 +26,11 @@ a{
 
 .divMargin {
   margin-left: 80px;
-  margin-top: 80px;
+  margin-top: 30px;
+}
+
+.moveRight {
+  margin-left: 10px;
 }
 
 .marginRemove {
@@ -92,9 +96,19 @@ a{
 }
 
 .sideText {
-  margin-right: 20px;
-  margin-top: 150px;
+  margin-bottom: -40px;
   font-family: Times New Roman;
+}
+
+.fontSize{
+  margin-top: 10px;
+  font-size: 20px;
+  color: #D3D5D4;
+}
+
+.fontSizeH {
+  font-size: 50px;
+  color: tomato;
 }
 
 .locationDetailsMargin {
@@ -103,4 +117,10 @@ a{
 
 .marginRightNav {
   margin-right: 90px;
+}
+
+/* Contact Form -msg */
+
+.textDown{
+  margin-top: 330px;
 }
