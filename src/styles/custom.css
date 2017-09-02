@@ -65,3 +65,9 @@ a{
 .formMargin {
   margin-bottom: 50px;
 }
+
+.sideText {
+  margin-right: 20px;
+  margin-top: 150px;
+  font-family: Times New Roman;
+}

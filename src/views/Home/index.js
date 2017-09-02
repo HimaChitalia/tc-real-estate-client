@@ -24,7 +24,7 @@ class Home extends Component {
         <section style={ sectionStyle }>
         <div className="divMargin uk-position-center-left uk-position-medium uk-position-center uk-padding-large">
           <div style={divStyle}>
-          <br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
+            <br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/>
             <div className='bgColor' > <br/>
               <h5 className='marginRemove uk-text-center textColor'> Trushal Chitalia </h5>
               <h5 className='marginRemove uk-text-center textColor'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/">DDS REAL ESTATE</a> </h5>
@@ -33,6 +33,10 @@ class Home extends Component {
               <SocialIcon className='marginRight marginBottom' url="https://www.facebook.com/ChitaliaTrushal/" color="#2D2F63"  />
             </div>
           </div>
+        </div>
+        <div className='sideText uk-position-top-right uk-position-medium'>
+          <h2 className='n' > A Name In Real Estate</h2>
+          <h1 className='marginRemove'>YOU CAN TRUST</h1>
         </div>
        </section>
       </div>
