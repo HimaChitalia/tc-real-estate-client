@@ -17,9 +17,9 @@ const Navbar = () =>  {
           <li><NavLink to="/locations/create">Search location</NavLink></li>
           <li><NavLink to="/contact">Contact Me!</NavLink></li>
           <div className='connect uk-position-top-right '>
-            <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" target="_blank"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
-            <li className='links'> <a className='margin' href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
-            <li className='links'> <a className='margin marginRightNav' href="https://www.facebook.com/ChitaliaTrushal/" target="_blank"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
+            <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" target="_blank" rel="noopener"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
+            <li className='links'> <a className='margin' href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
+            <li className='links'> <a className='margin marginRightNav' href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
           </div>
         </ul>
       </nav>
