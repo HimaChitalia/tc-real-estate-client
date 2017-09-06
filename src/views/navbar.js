@@ -18,7 +18,7 @@ const Navbar = () =>  {
           <li><NavLink to="/news">Industry News</NavLink></li>
           <li><NavLink to="/contact">Contact Me!</NavLink></li>
           <div className='connect uk-position-top-right '>
-            <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" target="_blank" rel="noopener noreferrer"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
+            <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" ><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
             <li className='links'> <a className='margin' href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
             <li className='links'> <a className='margin marginRightNav' href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
           </div>

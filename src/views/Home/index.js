@@ -30,7 +30,7 @@ class Home extends Component {
               <h5 className='marginRemove textColor uk-text-center'>  732-429-6129 </h5>
 
               <ul className='connect'>
-                <li className='moveRight marginRemove marginRight'> <a  href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" target="_blank" rel="noopener noreferrer"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
+                <li className='moveRight marginRemove marginRight'> <a  href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" ><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
                 <li className='marginRemove marginRight'> <a  href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
                 <li className='marginRemove marginRight'> <a  href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
               </ul>
