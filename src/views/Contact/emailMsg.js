@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class EmailMsg extends Component {
 
-  showLocationInfo = () => {
+  showContactInfo = () => {
     const { response, message, sendingEmail } = this.props
 
       return response === true ?
@@ -19,7 +19,7 @@ class EmailMsg extends Component {
    render() {
      return (
        <div>
-        {this.showLocationInfo()}
+        {this.showContactInfo()}
       </div>
      )
    }

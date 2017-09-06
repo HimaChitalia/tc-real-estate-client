@@ -8,7 +8,8 @@ import Navbar from './navbar'
 import LocationForm from './Location/locationForm';
 import SendContactInfo from './Contact/contactForm';
 import LocationDetails from './Location/locationDetails';
-import Properties from './Properties'
+import Properties from './Properties';
+import News from './News/newsList';
 import NotFound from '../views/NotFound';
 
 
@@ -26,10 +27,11 @@ class App extends Component {
             <Route exact path="/locations/create" component={LocationForm} />
             <Route exact path="/contact" component={SendContactInfo} />
             <Route exact path="/locationDetails" component={LocationDetails} />
+            <Route exact path="/news" component={News} />
             <Route exact path="/properties" component={Properties} />
             <Route component={NotFound} />
           </Switch>
-
+          
         </div>
       </Router >
     );
