@@ -126,3 +126,9 @@ a{
 .textDown{
   margin-top: 330px;
 }
+
+/* Top Margin for properties and news */
+
+.divTopMargin {
+  margin-top: 80px;
+}

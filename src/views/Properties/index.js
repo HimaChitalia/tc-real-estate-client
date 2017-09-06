@@ -3,7 +3,7 @@ import Iframe from 'react-iframe'
 
 const Properties = () => {
   return (
-    <div>
+    <div className='divTopMargin'>
       <Iframe url="http://msx.mlsmatrix.com/Matrix/public/IDX.aspx?idx=ea95f8"
               position="absolute"
               width="100%"
