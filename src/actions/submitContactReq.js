@@ -32,7 +32,6 @@ export const errorEmail = () => {
 };
 
 export function submitContactReqToServer(url, data) {
-  console.log(JSON.stringify({ data }))
   return dispatch => {
     dispatch(makeAPIRequestToSendEmail());
     dispatch(clearEmailDetails());

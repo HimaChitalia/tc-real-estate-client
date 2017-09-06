@@ -15,6 +15,7 @@ const Navbar = () =>  {
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/properties">Properties</NavLink></li>
           <li><NavLink to="/locations/create">Search location</NavLink></li>
+          <li><NavLink to="/news">Industry News</NavLink></li>
           <li><NavLink to="/contact">Contact Me!</NavLink></li>
           <div className='connect uk-position-top-right '>
             <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry"><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
