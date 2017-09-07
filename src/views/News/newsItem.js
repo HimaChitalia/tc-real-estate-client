@@ -1,8 +1,62 @@
-import React from 'react'
+import React, { Component} from 'react';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import { updateArticleLikes } from '../../actions/updateNews';
 
-const NewsItem = ({ item: { key, title, url }}) =>
-  <div key={key} >
-      <h4> - <a href={url} target="_blank" rel="noopener noreferrer">{title} </a></h4>
-  </div>
+class NewsItem extends Component {
+  constructor(){
+    super()
 
-export default NewsItem;
+    this.state = {
+      likes: 0,
+      key: ''
+    }
+  }
+
+  componentDidMount(){
+    this.setState({
+      likes: this.props.item.likes,
+      key: this.props.item.key
+    })
+  }
+
+  increaseCount = event => {
+    this.newState(event);
+    // this.submitUpdate(event)
+  }
+
+  newState = (event) => {
+    console.log(this.state)
+    this.setState({
+      likes: this.state.likes + 1,
+      key: this.state.key
+    }, this.submitUpdate(event))
+  }
+
+  submitUpdate = (event) => {
+    event.preventDefault();
+    // console.log(this.state)
+
+    this.props.updateArticleLikes(this.state)
+    this.setState({likes: 0, key: ''})
+  }
+
+  render(){
+    const {item } = this.props
+    return(
+      <div key={item.key} >
+        <h4> - <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title} </a></h4>
+        <button onClick ={ this.increaseCount }  data-likes={item.likes} value={item.key}>Like { this.state.likes }</button>
+      </div>
+    )
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { updateArticleLikes }, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(NewsItem);
+
+// export default NewsItem;
