@@ -75,7 +75,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 function mapStateToProps(state){
-  console.log(state.locations.infoVisible)
   return {
     visiable: state.locations.infoVisible
   }

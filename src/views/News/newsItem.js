@@ -22,14 +22,13 @@ class NewsItem extends Component {
 
   increaseCount = event => {
     this.newState(event);
-    // this.submitUpdate(event)
   }
 
   newState = (event) => {
     console.log(this.state)
     this.setState({
-      likes: this.state.likes + 1,
-      key: this.state.key
+      likes: this.props.item.likes + 1,
+      key: this.props.item.key
     }, this.submitUpdate(event))
   }
 
@@ -56,6 +55,11 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     { updateArticleLikes }, dispatch);
 };
+
+// const CounterContainer = connect(
+//   state => ({ value: state.counter }),
+//   dispatch => ({ onIncrement: () => dispatch(increment()) })
+// )(Counter)
 
 export default connect(null, mapDispatchToProps)(NewsItem);
 
