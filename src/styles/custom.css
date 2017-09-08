@@ -132,3 +132,9 @@ a{
 .divTopMargin {
   margin-top: 80px;
 }
+
+/* news item buttons */
+.allignRight {
+  float: left;
+ /*width: 130px*/
+}
