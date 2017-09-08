@@ -2,7 +2,8 @@ export default function updateLocation(state = {
   news: [],
   makeReq: false,
   errorRec: false,
-  recvdResp: false
+  recvdResp: false,
+  changeOrder: false
   }, action){
 
   switch(action.type){
@@ -22,6 +23,11 @@ export default function updateLocation(state = {
     return Object.assign({}, state, {
       recvdResp: true,
       news: action.news
+    });
+    
+    case 'CHANGE_ORDER':
+    return Object.assign({}, state, {
+      changeOrder: true
     });
 
     case 'ERROR_NEWS':

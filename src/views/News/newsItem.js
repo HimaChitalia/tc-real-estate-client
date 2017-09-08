@@ -42,7 +42,7 @@ class NewsItem extends Component {
     return(
       <div key={item.key} >
         <h4> - <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title} </a></h4>
-        <button onClick ={ this.increaseCount }  data-likes={item.likes} value={item.key}>Like { this.state.likes }</button>
+        <button onClick ={ this.increaseCount }  data-likes={item.likes} value={item.key}>Upvote { this.state.likes }</button>
       </div>
     )
   }
@@ -53,11 +53,5 @@ const mapDispatchToProps = dispatch => {
     { updateArticleLikes }, dispatch);
 };
 
-// const CounterContainer = connect(
-//   state => ({ value: state.counter }),
-//   dispatch => ({ onIncrement: () => dispatch(increment()) })
-// )(Counter)
 
 export default connect(null, mapDispatchToProps)(NewsItem);
-
-// export default NewsItem;

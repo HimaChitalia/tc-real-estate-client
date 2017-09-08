@@ -11,7 +11,7 @@ class News extends Component {
   componentDidMount() {
     this.props.fetchNews()
   }
-
+  
   showNews = () => {
 
     const { news } = this.props.news
@@ -19,7 +19,7 @@ class News extends Component {
     return  news !== undefined && news !== [] ?
     <div className='divTopMargin'>
       <ul className='uk-list uk-list-striped'>
-          {news.map(item => <li key={item.key}><div ><NewsItem item={item} /></div></li>)}
+          {news.sort(function(a, b) { return b.likes - a.likes }).map(item => <li key={item.key}><div ><NewsItem item={item} /></div></li>)}
       </ul>
     </div> :
     <div><h2> Please wait for the industry news to Load! </h2> </div>
@@ -37,7 +37,8 @@ class News extends Component {
 
 const mapStateToProps = state => {
   return {
-    news: state.news
+    news: state.news,
+    changeOrder: state.news.changeOrder
   }
 }
 
