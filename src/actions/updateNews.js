@@ -9,7 +9,6 @@ export const changeOrder = () => {
 };
 
 export function updateArticleLikes(data) {
-  debugger;
   return dispatch => {
     console.log(JSON.stringify({"article": data}))
     return fetch(API_URL + '/newsupdate', {
