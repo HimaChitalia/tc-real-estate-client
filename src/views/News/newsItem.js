@@ -26,18 +26,15 @@ class NewsItem extends Component {
 
   newState = (event) => {
     console.log(this.state)
+    event.persist()
     this.setState({
       likes: this.props.item.likes + 1,
       key: this.props.item.key
-    }, this.submitUpdate(event))
+    }, this.submitUpdate)
   }
 
-  submitUpdate = (event) => {
-    event.preventDefault();
-    // console.log(this.state)
-
+  submitUpdate = () => {
     this.props.updateArticleLikes(this.state)
-    this.setState({likes: 0, key: ''})
   }
 
   render(){
