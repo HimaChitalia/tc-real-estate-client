@@ -28,12 +28,13 @@ class NewsItem extends Component {
   }
 
   newState = (event) => {
-    console.log(event.target)
-    event.persist()
+    console.log(this.state.likes)
+    console.log(this.state.dislikes)
+    // event.persist()
     this.setState({
-      likes: this.props.item.likes + 1,
-      dislikes: this.props.item.dislikes,
-      key: this.props.item.key
+      likes: this.state.likes + 1,
+      dislikes: this.state.dislikes,
+      key: this.state.key
     }, this.submitUpdate)
   }
 
@@ -46,12 +47,13 @@ class NewsItem extends Component {
   }
 
   newDislikeState = (event) => {
-    console.log(event.target)
-    event.persist()
+    console.log(this.state.likes)
+    console.log(this.state.dislikes)
+    // event.persist()
     this.setState({
-      likes: this.props.item.likes,
-      dislikes: this.props.item.dislikes + 1,
-      key: this.props.item.key
+      likes: this.state.likes,
+      dislikes: this.state.dislikes + 1,
+      key: this.state.key
     }, this.submitUpdate)
   }
 
