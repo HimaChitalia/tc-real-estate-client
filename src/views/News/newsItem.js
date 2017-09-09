@@ -60,9 +60,9 @@ class NewsItem extends Component {
     return(
       <div key={item.key} >
         <h4> - <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title} </a></h4>
-        <input type="image" src={upImg} onClick ={ this.changeCount }  data-likes={item.likes} value={item.key} alt="Upvote"/>
+        <input className="imageInline" type="image" src={upImg} onClick ={ this.changeCount }  data-likes={item.likes} value={item.key} alt="Upvote"/>
         <p className='inlineText'>{ this.state.likes }</p>
-        <input type="image" src={downImg} onClick ={ this.changeCount }  data-dislikes={item.dislikes} value={item.key} alt="Downvote"/>
+        <input className="imageInline" type="image" src={downImg} onClick ={ this.changeCount }  data-dislikes={item.dislikes} value={item.key} alt="Downvote"/>
         <p className='inlineText'>{ this.state.dislikes }</p>
       </div>
     )
