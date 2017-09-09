@@ -23,48 +23,41 @@ class NewsItem extends Component {
     })
   }
 
-  increaseCount = event => {
-    this.newState(event);
+  changeCount = event => {
+    this.updateState(event);
   }
 
-  newState = (event) => {
+  updateState = (event) => {
     console.log(this.state.likes)
     console.log(this.state.dislikes)
-    // event.persist()
-    this.setState({
-      likes: this.state.likes + 1,
-      dislikes: this.state.dislikes,
-      key: this.state.key
-    }, this.submitUpdate)
+
+    if (event.target.dataset.likes) {
+      this.setState({
+        likes: this.state.likes + 1,
+        dislikes: this.state.dislikes,
+        key: this.state.key
+      }, this.submitUpdate)
+    } else if (event.target.dataset.dislikes) {
+      this.setState({
+        likes: this.state.likes,
+        dislikes: this.state.dislikes + 1,
+        key: this.state.key
+      }, this.submitUpdate)
+    }
+
   }
 
   submitUpdate = () => {
     this.props.updateArticleLikes(this.state)
   }
 
-  decreaseCount = event => {
-    this.newDislikeState(event);
-  }
-
-  newDislikeState = (event) => {
-    console.log(this.state.likes)
-    console.log(this.state.dislikes)
-    // event.persist()
-    this.setState({
-      likes: this.state.likes,
-      dislikes: this.state.dislikes + 1,
-      key: this.state.key
-    }, this.submitUpdate)
-  }
-
-
   render(){
     const {item } = this.props
     return(
       <div key={item.key} >
         <h4> - <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title} </a></h4>
-        <button onClick ={ this.increaseCount }  data-likes={item.likes} value={item.key}>Upvote { this.state.likes }</button>
-        <button onClick ={ this.decreaseCount }  data-dislikes={item.dislikes} value={item.key}>Downvote { this.state.dislikes }</button>
+        <button onClick ={ this.changeCount }  data-likes={item.likes} value={item.key}>Upvote { this.state.likes }</button>
+        <button onClick ={ this.changeCount }  data-dislikes={item.dislikes} value={item.key}>Downvote { this.state.dislikes }</button>
       </div>
     )
   }
