@@ -145,3 +145,16 @@ a{
   margin-right: 0px;
   margin-bottom: -15px;
 }
+
+/* Navbar MArgin */
+
+.navMargin {
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 20;
+}

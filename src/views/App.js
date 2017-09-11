@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //custom modules imports
 import Home from './Home';
-import Navbar from './navbar'
+import NavbarContainer from './navbar'
 import LocationForm from './Location/locationForm';
 import SendContactInfo from './Contact/contactForm';
 import LocationDetails from './Location/locationDetails';
@@ -19,7 +19,7 @@ class App extends Component {
       <Router >
         <div className="App">
           <div className="navbar">
-            <Navbar />
+            <NavbarContainer />
           </div>
 
           <Switch>

@@ -1,32 +1,65 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component} from 'react';
+import { Link } from 'react-router-dom';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 import '../styles/custom.css';
 
-import mailImg from '../images/Message-Mail-48.png';
-import linkedInImg from '../images/LinkedIn-48 (1).png';
-import facebookImg from '../images/Facebook-48.png';
+export default class NavbarContainer extends Component {
+  constructor(props) {
+    super(props);
 
-const Navbar = () =>  {
-  return (
-    <div className="App">
-      <nav className="uk-navbar uk-fixed-navigation navbar-color">
-        <ul className="uk-navbar-nav">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/properties">Properties</NavLink></li>
-          <li><NavLink to="/locations/create">Search location</NavLink></li>
-          <li><NavLink to="/news">Industry News</NavLink></li>
-          <li><NavLink to="/contact">Contact Me!</NavLink></li>
-          <div className='connect uk-position-top-right '>
-            <li className='links'> <a className='margin' href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry" ><img src={mailImg} alt={'<a href="mailto:tchitalia215@gmail.com?subject=Real Estate Inquiry">tchitalia215@gmail.com</a>'}/></a> </li>
-            <li className='links'> <a className='margin' href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/></a></li>
-            <li className='links'> <a className='margin marginRightNav' href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer"><img src={facebookImg} alt={'<a href="https://www.facebook.com/ChitaliaTrushal/"></a>'}/></a> </li>
-          </div>
-        </ul>
-      </nav>
-    </div>
-  )
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false,
+      dropdownOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
+  render() {
+    return (
+      <div className='navMargin container-fluid' >
+        <Navbar className='navbar-color' toggleable>
+          <NavbarToggler right onClick={this.toggle} />
+          <NavbarBrand tag={Link} to="/" activeClassName="active" >
+            Trushal Chitalia
+          </NavbarBrand>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink tag={Link} to="/properties" activeClassName="active">
+                   Properties
+                </NavLink> 
+              </NavItem> 
+              <NavItem>
+                <NavLink tag={Link} to="/locations/create" activeClassName="active">
+                   Search location
+                </NavLink> 
+              </NavItem> 
+              <NavItem>
+                <NavLink tag={Link} to="/news" activeClassName="active">
+                   Industry News
+                </NavLink> 
+              </NavItem>
+            </Nav>
+            <Dropdown isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
+              <DropdownToggle caret>
+                Contact Me!
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem> <a href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer">LinkedIn</a></DropdownItem>
+                <DropdownItem> <a href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer">Facebook</a></DropdownItem>
+                <DropdownItem divider/>
+                <DropdownItem tag={Link} to="/contact" activeClassName="active">Send an Email!</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
 }
-
-
-export default Navbar;
