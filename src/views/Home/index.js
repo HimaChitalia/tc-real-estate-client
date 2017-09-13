@@ -54,36 +54,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// <Container >
-//
-//  <Row className='bgColor pullDown showInSide  col-sm-12'>
-//    <Col className='col-12 marginRemove textShadow textColor'><h3 className='uk-text-center'><strong>Trushal Chitalia</strong></h3></Col>
-//    <Col className='col-12 marginRemove textShadow'><h3 className='uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer"><strong>DDS REAL ESTATE</strong></a> </h3></Col>
-//    <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer"><strong>838 Green St STE 202,</strong></a></h3></Col>
-//    <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer"><strong>Iselin, NJ 08830</strong></a></h3></Col>
-//    <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'><strong> 732-429-6129</strong></h3></Col>
-//  </Row>
- // </Container>
-
-// <div>
-//  <section style={ sectionStyle }>
-//   <Container >
-//    <Row className=''>
-//     <div className='homeMargin'>
-//       <Row className='imgMargin col-lg-pull-5 col-md-offset-2 col-sm-3'>
-//        <Col className=' hidden-xs hidden-sm col-12'><img src={trushalImag} alt={'Trushal Chitalia'}/></Col>
-//        <Col className='col-12 marginRemove textShadow textColor'><h3 className='uk-text-center'><strong>Trushal Chitalia</strong></h3></Col>
-//        <Col className='col-12 marginRemove textShadow'><h3 className='uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer">DDS REAL ESTATE</a> </h3></Col>
-//        <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer">838 Green St STE 202,</a></h3></Col>
-//        <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer">Iselin, NJ 08830</a></h3></Col>
-//        <Col className='col-12 marginRemove textShadow textColor'><h3 className=' uk-text-center'> 732-429-6129</h3></Col>
-//       </Row>
-//      </div>
-//     </Row>
-//   </Container>
-//  </section>
-//  <div className='sideText navbar-color uk-text-center uk-position-bottom'>
-//   <h5 className='fontSize' > When It Comes To Real Estate, Think Of Me - Trushal Chitalia </h5>
-//  </div>
-// </div>

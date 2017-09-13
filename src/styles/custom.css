@@ -296,7 +296,7 @@ a{
   width: 100%;
   height: 100%;
 }
-
+/* text on home page small window*/
 .textShadow {
   text-shadow: 0 0 1px #2E3548;
 }
@@ -305,7 +305,7 @@ a.anchoreText {
   text-shadow: 0 0 1px #2E3548;
   color: #F8AC34;
 }
-
+/* anchore text on home page big window*/
 a.anchoreTextBig {
   color: #2E3548;
 }

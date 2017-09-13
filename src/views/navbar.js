@@ -33,17 +33,17 @@ export default class NavbarContainer extends Component {
               <NavItem>
                 <NavLink tag={Link} to="/properties" activeClassName="active">
                    Properties
-                </NavLink> 
-              </NavItem> 
+                </NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/locations/create" activeClassName="active">
                    Search location
-                </NavLink> 
-              </NavItem> 
+                </NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/news" activeClassName="active">
                    Industry News
-                </NavLink> 
+                </NavLink>
               </NavItem>
             </Nav>
             <Dropdown isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
