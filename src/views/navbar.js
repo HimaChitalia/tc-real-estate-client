@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 // import { Link } from 'react-router-dom';
 // import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import { Navbar, Nav, NavItem, MenuItem} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import '../styles/custom.css';
@@ -9,9 +9,9 @@ import '../styles/custom.css';
 export default class NavbarContainer extends Component {
   render() {
     return (
-       <Navbar inverse collapseOnSelect className='navbar-color navbarDecorate'>
-        <Navbar.Header>
-          <Navbar.Brand className='navbarMarginLeft'>
+       <Navbar inverse collapseOnSelect className='navbarDecorate'>
+        <Navbar.Header className='navbar-header'>
+          <Navbar.Brand className='navbarMarginLeft '>
             <a href="/">Trushal Chitalia</a>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -31,14 +31,10 @@ export default class NavbarContainer extends Component {
 
           </Nav>
           <Nav pullRight>
-          <NavDropdown eventKey={1} title="Dropdown" id="basic-nav-dropdown">
-               <a href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br/>
-               <a href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <MenuItem divider />
+
             <LinkContainer to="/contact">
-               <MenuItem eventKey={1.3}>Send an Email!</MenuItem>
+               <MenuItem eventKey={1}>Contact Us</MenuItem>
             </LinkContainer>
-          </NavDropdown>
 
           </Nav>
         </Navbar.Collapse>

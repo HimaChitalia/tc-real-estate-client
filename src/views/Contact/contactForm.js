@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 // custom modules
 import { submitContactReqToServer } from '../../actions/submitContactReq';
 import EmailMsg from './emailMsg';
+import SocialLinks from './social';
 import '../../styles/custom.css';
 
 class SendContactInfo extends Component {
@@ -54,6 +55,12 @@ class SendContactInfo extends Component {
             </fieldset>
           </form>
         </div>
+        <div className= 'uk-position-bottom'>
+          <hr />
+
+          { < SocialLinks /> }
+        </div>
+
         <div>
           { < EmailMsg /> }
         </div>
