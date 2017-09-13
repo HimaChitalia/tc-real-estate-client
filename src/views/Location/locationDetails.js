@@ -19,10 +19,9 @@ class LocationDetails extends Component {
       return visiable === true ?
 
       <div className='locationDetailsMargin'>
-        <h2 >Location Address: { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}</h2>
 
-        <h2> There are {hospitalsArray.length} hospitals, {trainsArray.length}  Train Stations, { pharmaciesArray.length } pharmacies, {schoolsArray.length} schools, and {restaurantsArray.length} restaurants.</h2>
-        
+        <h2> There are {hospitalsArray.length} Hospitals, {trainsArray.length}  Train Stations, { pharmaciesArray.length } Pharmacies, {schoolsArray.length} Schools, and {restaurantsArray.length} Restaurants near { this.cap(location.address) }, { this.cap(location.city) }, {location.state.toUpperCase()}.</h2>
+
         <h4> Hospitals </h4>
           { this.showInfo(hospitalsArray) }
         <h4> Train Station </h4>
