@@ -5694,6 +5694,12 @@ react-reveal-text@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/react-reveal-text/-/react-reveal-text-0.0.3.tgz#fc24b550d8b210b6d4323ce0078f7d0d3a54768e"
 
+react-router-bootstrap@^0.24.4:
+  version "0.24.4"
+  resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.24.4.tgz#6e89481d8a8979649a0dd4535e4a68df4a3d0b12"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-router-dom@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.0.0.tgz#4fa4418e14b8cfc5bcc0bdea0c4083fb8c2aef10"

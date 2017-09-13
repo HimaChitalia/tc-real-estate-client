@@ -13,7 +13,7 @@ import facebookImg from '../../images/Facebook-48 (1).png';
 class Home extends Component {
   render() {
     return (
-      <div className="jumbotron" >
+      <div className="jumbotron divTopMargin" >
          <div id='smallScreen' className="container-fluid pullDown showInSide bgColor uk-position-center-left uk-position-medium uk-position-center">
           <h3 className='uk-text-center textColor textShadow'><strong>Trushal Chitalia</strong></h3>
           <h3 className='uk-text-center'> <a href="http://ddsrealestate.msx.mlsmatrix.com/Matrix/Public/" className='anchoreText' target="_blank" rel="noopener noreferrer"><strong>DDS REAL ESTATE</strong></a> </h3>
