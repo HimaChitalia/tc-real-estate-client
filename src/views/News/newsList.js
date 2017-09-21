@@ -20,7 +20,7 @@ class News extends Component {
     <div className='divTopMargin'>
       <ul className='uk-list uk-list-striped'>
           {news.sort(function(a, b) {
-            return new Date(b.pdate).getTime() - new Date(a.pdate).getTime()
+            return b.likes - a.likes
           }).map(item => <li key={item.key}><div ><NewsItem item={item} /></div></li>)}
       </ul>
     </div> :

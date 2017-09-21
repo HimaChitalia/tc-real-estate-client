@@ -1,8 +1,9 @@
 import { API_URL } from '../global';
 
-export const changeOrder = () => {
+export const changeOrder = updatedObject => {
     return {
-        type: 'CHANGE_ORDER'
+        type: 'CHANGE_ORDER',
+        updatedObject
     };
 };
 
@@ -18,8 +19,8 @@ export function updateArticleLikesAndDislikes(data) {
       body: JSON.stringify({"article": data})
    })
    .then(response => response.json())
-   .then(updateMessage => {
-       dispatch(changeOrder());
+   .then(updatedObject => {
+       dispatch(changeOrder(updatedObject));
       //  console.log(emailMessage)
       //  dispatch(sentEmail(emailMessage));
    })

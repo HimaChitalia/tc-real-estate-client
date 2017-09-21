@@ -24,10 +24,19 @@ export default function updateLocation(state = {
       recvdResp: true,
       news: action.news
     });
-    
+
     case 'CHANGE_ORDER':
+
     return Object.assign({}, state, {
-      changeOrder: true
+
+      changeOrder: true,
+      news: state.news.map(function(newsItem){
+        if (newsItem.id === action.updatedObject.id){
+         return newsItem = action.updatedObject
+       }else {
+         return newsItem
+       }
+      })
     });
 
     case 'ERROR_NEWS':
