@@ -18,6 +18,7 @@ class SearchLocationInfo extends Component {
     }
   }
 
+
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.submitLocationToServer('/search', this.state)
@@ -32,7 +33,6 @@ class SearchLocationInfo extends Component {
 
   render() {
 
-    console.log(this.props)
     const { visiable } = this.props
 
     return (
