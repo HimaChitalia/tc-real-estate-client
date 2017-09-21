@@ -9,10 +9,10 @@ class EmailMsg extends Component {
       return response === true ?
 
       <div>
-        <h2 className='uk-text-center uk-position-center textDown'>{message.message}</h2>
+        <h5 className='uk-text-center uk-position-center textDown'>{message.message}</h5>
 
       </div> : sendingEmail === true ?
-        <div> <h2 className='uk-text-center uk-position-center textDown' > Sending Your Email to Trushal Chitalia... </h2> </div> :
+        <div> <h5 className='uk-text-center uk-position-center textDown' > Sending Your Email to Trushal Chitalia... </h5> </div> :
         <div> </div>
    }
 
