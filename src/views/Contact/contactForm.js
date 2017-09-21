@@ -56,8 +56,6 @@ class SendContactInfo extends Component {
           </form>
         </div>
         <div className= 'uk-position-bottom'>
-          <hr />
-
           { < SocialLinks /> }
         </div>
 

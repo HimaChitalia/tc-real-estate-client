@@ -15,8 +15,8 @@ hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: -50%;
+    margin-right: -50%;
     border-style: inset;
     border-width: 1px;
 }
@@ -239,7 +239,7 @@ a{
 }
 
 .sideText {
-  margin-bottom: -40px;
+  margin-bottom: -130px;
   font-family: Times New Roman;
 }
 
@@ -332,4 +332,15 @@ a.anchoreTextBig {
 /*navbar left margin*/
 .navbarMarginLeft {
     margin-left: 0;
+}
+
+/*buttons on contact page */
+
+.buttonText {
+  color: tomato;
+  margin-left: 50%;
+  font-weight: 600;
+  padding: 10%;
+  transform-style: preserve-3d;
+  border-radius: 10%;
 }
