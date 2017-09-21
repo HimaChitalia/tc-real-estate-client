@@ -3,12 +3,30 @@
   /*background: #2E3548;*/
 }
 
+.navbarDecorate{
+  border: none;
+}
+
+.navbar-header {
+  color: black;
+}
+/* hr for contact page */
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: -50%;
+    margin-right: -50%;
+    border-style: inset;
+    border-width: 1px;
+}
+
 h2 {
   color: tomato;
 }
 
 .bgColor {
-  background-color: rgba(216, 224, 226, .8);
+  background-color: rgba(216, 224, 226, .9);
   /*background-color: rgba(216, 224, 226, .7);*/
 }
 
@@ -20,8 +38,16 @@ a{
   color: #2D2F63;
 }
 
+/* text color for the text of home screen in small window size*/
 .textColor {
-  color: #2D2F63;
+  color: #F8AC34
+  /*#2E3548;*/
+  /*color: tomato;*/
+}
+
+/* text color for the text of home screen in big window size*/
+.textColorBig {
+  color: #2E3548;
 }
 
 .divMargin {
@@ -29,14 +55,125 @@ a{
   margin-top: 30px;
 }
 
+ /* ul with contact icons on home page for big screen */
+
 .moveRight {
   margin-left: 10px;
 }
 
+/* marginRemove removes margin of contect info on home page */
+
 .marginRemove {
+  margin-top: -4px;
+  margin-left: -45px;
+  /*margin-bottom: -70;*/
+}
+
+/*margin remove for socila media links big screen */
+..marginRemoveBig {
   margin-top: -14px;
   margin-bottom: -70;
 }
+
+/* background image */
+.jumbotron {
+  margin-top: -18px;
+}
+
+@media screen and (max-width: 1920px) { /* Specific to this particular image */
+  .jumbotron {
+    min-height: 900px;
+    width:100%;
+    background: url(../images/house_4.png);
+    /*background: url(../images/house_4.jpg);*/
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 1500px) { /* Specific to this particular image */
+  .jumbotron {
+    min-height: 800px;
+    width:100%;
+    background: url(../images/house_4.png);
+    /*background: url(../images/kitchen-2486092_1920.jpg);*/
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .jumbotron {
+    min-height: 900px;
+    width:100%;
+    background: url(../images/kitchen-2486092_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* pullDown class to make the text little down on home page*/
+
+.pullDown {
+  /*margin-top: 20%;*/
+}
+@media screen and (max-width: 1000px) {
+  .showInSide {
+    width: 100%;
+    /*column-span: all;*/
+  }
+  .divSocial {
+    margin-left: 27%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .divSocial {
+    margin-left: 20%
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .divSocial {
+    margin-left: 10%
+  }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 465px) {
+  .divSocial {
+    margin-left: 0%;
+    margin-right: -10%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) {
+  .divSocial {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  #smallScreen { display: block; }
+  #bigScreen { display: none; }
+}
+
+@media screen and (min-width: 1000px) {
+  #smallScreen { display: none;; }
+  #bigScreen { display: block; }
+}
+
+.marginBigScreen {
+  margin: none;
+}
+
+/* imgMargin for the image on home page */
+/* .imgMargin {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;*/
+/*}*/
 
 .marginRight {
   margin-right: 50px;
@@ -82,8 +219,14 @@ a{
   margin-right: -40px;
 }
 
+.connectBig li {
+    display:inline-block;
+    margin-left: 30px;
+}
+
 .connect li {
     display:inline-block;
+    margin-left: 5%;
 }
 
 .formMargin {
@@ -96,7 +239,7 @@ a{
 }
 
 .sideText {
-  margin-bottom: -40px;
+  margin-bottom: -130px;
   font-family: Times New Roman;
 }
 
@@ -130,7 +273,7 @@ a{
 /* Top Margin for properties and news */
 
 .divTopMargin {
-  margin-top: 80px;
+  margin-top: -2%;
 }
 
 /* news item button text*/
@@ -144,4 +287,60 @@ a{
 .imageInline {
   margin-right: 0px;
   margin-bottom: -15px;
+}
+
+/* Navbar MArgin */
+
+.navMargin {
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 20;
+}
+
+/* home page margin */
+
+.homeMargin {
+  margin-top: 10%;
+  /*margin-left: -30%;*/
+  /*margin-right: 70%*/
+}
+
+.marginImg {
+  width: 100%;
+  height: 100%;
+}
+/* text on home page small window*/
+.textShadow {
+  text-shadow: 0 0 1px #2E3548;
+}
+
+a.anchoreText {
+  text-shadow: 0 0 1px #2E3548;
+  color: #F8AC34;
+}
+/* anchore text on home page big window*/
+a.anchoreTextBig {
+  color: #2E3548;
+}
+
+
+/*navbar left margin*/
+.navbarMarginLeft {
+    margin-left: 0;
+}
+
+/*buttons on contact page */
+
+.buttonText {
+  color: tomato;
+  margin-left: 50%;
+  font-weight: 600;
+  padding: 10%;
+  transform-style: preserve-3d;
+  border-radius: 10%;
 }
