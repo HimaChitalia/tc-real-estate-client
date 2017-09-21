@@ -35,34 +35,54 @@ class SendContactInfo extends Component {
   render() {
     return (
       <div>
-        <div className="uk-position-center formMargin">
-          <form className="uk-form" onSubmit={this.handleOnSubmit}>
+        <div className="uk-position-center locationFormMargin">
+
+          <form id="largeScreenForm" className="uk-form" onSubmit={this.handleOnSubmit}>
             <fieldset className="bgColor">
               <h2 className='uk-text-center'>Get In Touch!</h2>
               <div className="uk-form-row">
                 <legend>Name</legend>
-                <input className="uk-form-large" type="text" placeholder="Your Name" name="name" onChange={this.handleOnChange} value={this.state.name} />
+                <input type="text" placeholder="Your Name" name="name" onChange={this.handleOnChange} value={this.state.name} />
               </div>
               <div className="uk-form-row">
                 <legend>Email</legend>
-                <input className="uk-form-large" type="email" placeholder="Your Email" name="email" onChange={this.handleOnChange} value={this.state.email} />
+                <input type="email" placeholder="Your Email" name="email" onChange={this.handleOnChange} value={this.state.email} />
               </div>
               <div className="uk-form-row">
                 <legend>Message</legend>
-                ​<textarea className="uk-form-large" type="txtArea" rows="10" cols="70" placeholder="Your Message" name="message" onChange={this.handleOnChange} value={this.state.message} ></textarea>
+                ​<textarea className='textareaSize' rows="15" cols="70" type="txtArea" placeholder="Your Message" name="message" onChange={this.handleOnChange} value={this.state.message} ></textarea>
               </div>
               <input type="submit" value="Send Email" />
             </fieldset>
           </form>
+
+          <form id="smallScreenForm" className="uk-form" onSubmit={this.handleOnSubmit}>
+            <fieldset className="bgColor">
+              <h2 className='uk-text-center'>Get In Touch!</h2>
+              <div className="uk-form-row">
+                <legend>Name</legend>
+                <input type="text" placeholder="Your Name" name="name" onChange={this.handleOnChange} value={this.state.name} />
+              </div>
+              <div className="uk-form-row">
+                <legend>Email</legend>
+                <input type="email" placeholder="Your Email" name="email" onChange={this.handleOnChange} value={this.state.email} />
+              </div>
+              <div className="uk-form-row">
+                <legend>Message</legend>
+                ​<textarea className='textareaSize' rows="15" cols="40" type="txtArea" placeholder="Your Message" name="message" onChange={this.handleOnChange} value={this.state.message} ></textarea>
+              </div>
+              <input type="submit" value="Send Email" />
+            </fieldset>
+          </form>
+
+        </div>
+        <div>
+          { < EmailMsg /> }
         </div>
         <div className= 'uk-position-bottom'>
           { < SocialLinks /> }
         </div>
-
-        <div>
-          { < EmailMsg /> }
-        </div>
-        <div className='sideText navbar-color uk-text-center uk-position-bottom'>
+        <div className='footerOnContact navbar-color uk-text-center uk-position-bottom'>
           <h5 className='fontSize' > When It Comes To Real Estate, Think Of Me - Trushal Chitalia </h5>
         </div>
       </div>

@@ -10,9 +10,13 @@ export default class SocialLinks extends Component {
    render() {
      return (
        <div className='uk-position-center'>
-        <h2 >OUR SOCIAL SITES</h2><br/>  <hr />
-        <a className="btn" href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer"><button className='buttonText bgColor'>Facebook</button></a>
-        <a className="btn" href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><button className='buttonText bgColor'>LinkedIn</button></a>
+        <br/><h2 >OUR SOCIAL SITES</h2><br/>  <hr /><br/>
+        <div>
+          <a className="btn" href="https://www.facebook.com/ChitaliaTrushal/" target="_blank" rel="noopener noreferrer"><button className='buttonText bgColor'>Facebook</button></a>
+          <a className="btn" href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><button className='buttonText bgColor'>LinkedIn</button></a>
+          <br/>
+        </div>
+
       </div>
      )
    }

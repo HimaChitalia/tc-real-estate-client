@@ -112,6 +112,19 @@ a{
   }
 }
 
+/* Contact form for different screens */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  #smallScreenForm { display: block; }
+  #largeScreenForm  { display: none; }
+}
+
+@media screen and (min-width: 600px) {
+  #smallScreenForm { display: none; }
+  #largeScreenForm { display: block; }
+}
+
+
 /* pullDown class to make the text little down on home page*/
 
 .pullDown {
@@ -160,7 +173,7 @@ a{
 }
 
 @media screen and (min-width: 1000px) {
-  #smallScreen { display: none;; }
+  #smallScreen { display: none; }
   #bigScreen { display: block; }
 }
 
@@ -233,13 +246,13 @@ a{
   margin-bottom: 50px;
 }
 
-.locationFormMargin {
-  margin-top: -170px;
-  margin-bottom: -20px;
+.locationFormargin {
+  /*margin-top: -90%;*/
+  /*margin-bottom: -20px;*/
 }
 
 .sideText {
-  margin-bottom: -130px;
+  margin-bottom: -5%;
   font-family: Times New Roman;
 }
 
@@ -343,4 +356,11 @@ a.anchoreTextBig {
   padding: 10%;
   transform-style: preserve-3d;
   border-radius: 10%;
+}
+
+/* Footer on contact */
+.footerOnContact {
+  margin-right: -100%;
+  margin-left: -100%;
+  margin-bottom: -15%;
 }
