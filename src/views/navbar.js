@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
-// import { Link } from 'react-router-dom';
-// import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { Navbar, Nav, NavItem, MenuItem} from 'react-bootstrap';
+import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import '../styles/custom.css';
@@ -9,9 +7,9 @@ import '../styles/custom.css';
 export default class NavbarContainer extends Component {
   render() {
     return (
-       <Navbar inverse collapseOnSelect className='navbarDecorate'>
+       <Navbar inverse collapseOnSelect className=''>
         <Navbar.Header className='navbar-header'>
-          <Navbar.Brand className='navbarMarginLeft '>
+          <Navbar.Brand >
             <a href="/">Trushal Chitalia</a>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -33,7 +31,7 @@ export default class NavbarContainer extends Component {
           <Nav pullRight>
 
             <LinkContainer to="/contact">
-               <MenuItem eventKey={1}>Contact Us</MenuItem>
+               <NavItem eventKey={1}>Contact Us</NavItem>
             </LinkContainer>
 
           </Nav>
@@ -42,3 +40,6 @@ export default class NavbarContainer extends Component {
     )
   }
 };
+
+// <MenuItem eventKey={1}>Contact Us</MenuItem>
+
