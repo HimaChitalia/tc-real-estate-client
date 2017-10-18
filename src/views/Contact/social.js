@@ -23,4 +23,3 @@ export default class SocialLinks extends Component {
  }
 
 
- // <a className="btn" href="https://www.linkedin.com/in/trushal-chitalia-35988638/" target="_blank" rel="noopener noreferrer"><button className='buttonText bgColor'><img src={linkedInImg} alt={'<a href="https://www.linkedin.com/in/trushal-chitalia-35988638/"></a>'}/> LinkedIn</button></a>
